@@ -3,7 +3,7 @@ export default class Admin extends Component {
     render() {
         return (
             <div>
-                Admin
+                Admin Admin
             </div>
         )
     }
