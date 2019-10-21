@@ -3,7 +3,7 @@ export default class Login extends Component {
     render() {
         return (
             <div>
-                about
+                about 345678
             </div>
         )
     }
