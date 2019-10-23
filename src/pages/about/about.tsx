@@ -1,9 +1,18 @@
 import React,{Component} from 'react';
 export default class About extends Component {
-    render() {
+    constructor(props:any) {
+        super(props);
+        this.state={}
+    }
+    
+    handleClick() {
+        console.log(3456789)
+    }
+ 
+    render() { 
         return (
-            <div>
-                about 345678
+            <div onClick={this.handleClick}>
+                about
             </div>
         )
     }
