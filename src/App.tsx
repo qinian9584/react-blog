@@ -4,7 +4,6 @@ import Admin from './pages/admin/admin'
 import Login from './pages/login/login'
 import About from './pages/about/about'
 const App: React.FC = () => {
-  console.log(3456)
   return (
     <BrowserRouter>
       <Switch>

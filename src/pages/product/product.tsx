@@ -1,12 +1,12 @@
 import React from 'react';
-import './index.less';
+import './product.less';
 export interface IAppProps {
 }
 
 export interface IAppState {
 }
 
-export default class Herder extends React.Component<IAppProps, IAppState> {
+export default class Product extends React.Component<IAppProps, IAppState> {
     constructor(props: IAppProps) {
         super(props);
 
@@ -16,9 +16,8 @@ export default class Herder extends React.Component<IAppProps, IAppState> {
 
     render() {
         return (
-            <div className="header">
-                11122
-                <p>头部</p>
+            <div className="product">
+                product
             </div>
         );
     }
