@@ -17,7 +17,7 @@ export default class Category extends React.Component<IAppProps, IAppState> {
     render() {
         return (
             <div className="category">
-                home
+                category
             </div>
         );
     }
