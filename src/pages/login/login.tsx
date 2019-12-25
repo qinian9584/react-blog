@@ -7,7 +7,9 @@ const { Content } = Layout;
 
 
 interface UserFormProps extends FormComponentProps {
-    history:any
+    history:any,
+    location:any,
+    match:any,
 }
 
 interface IState { 

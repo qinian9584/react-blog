@@ -1,19 +1,18 @@
-import React,{Component} from 'react';
-export default class About extends Component {
-    constructor(props:any) {
-        super(props);
-        this.state={}
-    }
-    
-    handleClick() {
-        console.log(3456789)
-    }
- 
-    render() { 
+import React from 'react';
+export interface IAppProps {
+}
+
+export interface IAppState {
+}
+
+export default class About extends React.Component<IAppProps, IAppState> {
+    render() {
         return (
-            <div onClick={this.handleClick}>
-                about
+            <div className="about">
+                About
             </div>
-        )
+        );
     }
 }
+
+

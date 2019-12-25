@@ -22,6 +22,33 @@
         ]
     },
     {
+        title:'文章管理',
+        key:'/article',
+        icon:'home',
+        children:[
+            {
+                title:'创建文章',
+                key:'/article',
+                icon:'pie-chart'
+            },
+            {
+                title:'文章列表',
+                key:'/article-list',
+                icon:'pie-chart'
+            },
+            {
+                title:'富文本编辑器',
+                key:'/tinymce',
+                icon:'pie-chart'
+            },
+            {
+                title:'markdown编辑器',
+                key:'/markdown',
+                icon:'pie-chart'
+            },
+        ]
+    },
+    {
         title:'用户管理',
         key:'/user',
         icon:'pie-chart'
