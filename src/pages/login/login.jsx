@@ -4,32 +4,39 @@ import './login.less'
 import { Layout } from 'antd';
 const { Header, Content } = Layout;
 export default class Login extends Component {
-    
+
     render() {
         return (
             <div className="login">
                 <Layout className="box">
-                    <Header>Header</Header> 
+                    <Header>Header</Header>
                     <Content className="login-content">
                         <Form className="login-form">
                             <Form.Item>
                                 <Input
-                                prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                                placeholder="Username"
+                                    placeholder="Username"
+                                    prefix={<Icon style={{ color: 'rgba(0,0,0,.25)' }}
+                                        type="user"
+                                            />}
                                 />
                             </Form.Item>
                             <Form.Item>
                                 <Input
-                                    prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                                    type="password"
                                     placeholder="Password"
-                                    />
+                                    prefix={<Icon style={{ color: 'rgba(0,0,0,.25)' }}
+                                        type="lock"
+                                            />}
+                                    type="password"
+                                />
                             </Form.Item>
                             <Form.Item>
-                                <Button type="primary" htmlType="submit" className="login-form-button">
+                                <Button className="login-form-button"
+                                    htmlType="submit"
+                                    type="primary"
+                                >
                                     Log in
                                 </Button>
-                                
+
                             </Form.Item>
                         </Form>
                     </Content>

@@ -5,6 +5,7 @@ import LeftNav from '../../components/left-nav';
 import Header from '../../components/header';
 import Home from '../home/home';
 import About from '../about/about';
+import Reduxpage from '../redux';
 
 
 const { Footer, Sider, Content } = Layout;
@@ -13,15 +14,24 @@ export default class Admin extends Component {
         return (
             <Layout style={{height:'100%'}}>
                 <Sider>
-                    <LeftNav/>
+                    <LeftNav></LeftNav>
                 </Sider>
-                <Layout>                    
-                    <Header/>                   
+                <Layout>
+                    <Header time="2020-4-28"></Header>
                     <Content style={{background:'#fff'}}>
                         <Switch>
-                            <Route path='/home' component={Home}></Route>                            
-                            <Route path='/about' component={About}></Route>
-                            <Redirect to="/home" component={Home}></Redirect>                           
+                            <Route component={Home}
+                                path="/home"
+                            ></Route>
+                            <Route component={Reduxpage}
+                                path="/redux"
+                            ></Route>
+                            <Route component={About}
+                                path="/about"
+                            ></Route>
+                            <Redirect component={Home}
+                                to="/home"
+                            ></Redirect>
                         </Switch>
                     </Content>
                     <Footer style={{textAlign:'center',color:'#cccccc',padding:'15px 50px'}}>推荐使用chrome浏览器</Footer>
@@ -29,4 +39,4 @@ export default class Admin extends Component {
             </Layout>
         )
     }
-} 
+}

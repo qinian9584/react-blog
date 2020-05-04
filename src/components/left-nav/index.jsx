@@ -8,11 +8,15 @@ const { SubMenu } = Menu;
 class LeftNav extends React.Component {
     constructor(props) {
         super(props);
-    
+
         this.state = {
-            
+
         }
-      }
+    }
+    UNSAFE_componentWillMount(){
+        this.meunNodes = this.getMeunNodes(menuList)
+    }
+
     //根据menuList的数据，生成对应的标签
     getMeunNodes = (menuList) =>{
         const path = this.props.location.pathname;
@@ -23,13 +27,13 @@ class LeftNav extends React.Component {
                         <Link to={item.key}>
                             <Icon type={item.icon} />
                             <span>{item.title}</span>
-                        </Link>                          
+                        </Link>
                     </Menu.Item>
                 )
             }else{
                 const cItem = item.children.find((cItem)=>cItem.key === path)
                 if(cItem)this.openKey = item.key;
-                
+
                 return <SubMenu
                     key={item.key}
                     title={
@@ -38,16 +42,12 @@ class LeftNav extends React.Component {
                             <span>{item.title}</span>
                         </span>
                     }
-                >
+                       >
                     {this.getMeunNodes(item.children)}
                 </SubMenu>
-                
+
             }
         })
-    }
-
-    UNSAFE_componentWillMount(){
-        this.meunNodes = this.getMeunNodes(menuList)
     }
 
     render() {
@@ -57,12 +57,12 @@ class LeftNav extends React.Component {
             <div className="nav">
                 <div>
                     <Menu
-                        selectedKeys={[path]}
                         defaultOpenKeys={[openKey]}
                         mode="inline"
+                        selectedKeys={[path]}
                         theme="dark"
-                    >                       
-                        {this.meunNodes}     
+                    >
+                        {this.meunNodes}
                     </Menu>
                 </div>
             </div>

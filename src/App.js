@@ -5,12 +5,16 @@ import Admin from './pages/admin/admin'
 
 export default class App extends Component {
   render() {
-      return (
+    return (
         <BrowserRouter>
           <Switch>
             {/* <Route path='/' exact component={Admin}></Route> */}
-            <Route path='/login' component={Login}></Route>
-            <Route path='/' component={Admin}></Route>
+            <Route component={Login}
+                path="/login"
+            ></Route>
+            <Route component={Admin}
+                path="/"
+            ></Route>
           </Switch>
         </BrowserRouter>
       )

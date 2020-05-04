@@ -5,6 +5,16 @@
         icon:'pie-chart'
     },
     {
+        title:'redux',
+        key:'/redux',
+        icon:'pie-chart'
+    },
+    {
+        title:'关于自己',
+        key:'/about',
+        icon:'pie-chart'
+    },
+    {
         title:'商品',
         key:'/category',
         icon:'home',
@@ -18,7 +28,7 @@
                 title:'商品管理',
                 key:'/product',
                 icon:'pie-chart'
-            },
+            }
         ]
     },
     {
@@ -45,13 +55,13 @@
                 title:'markdown编辑器',
                 key:'/markdown',
                 icon:'pie-chart'
-            },
+            }
         ]
     },
     {
         title:'用户管理',
         key:'/user',
         icon:'pie-chart'
-    },
+    }
 ]
 export default menuList
